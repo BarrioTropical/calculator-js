@@ -1,0 +1,74 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black:#000;
+    --grey: #c4c4c4;
+    --white: #FFF;
+}
+
+body{
+    background-color: var(--black);
+}
+
+/* container */
+.container{
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 325px;
+}
+
+.screen{
+    width: 100%;
+    border-top: 0px 20px;
+    border-bottom: solid 1px var(--white);
+    font-size: 3rem;
+    height: 80px;
+    background-color: transparent;
+    color: var(--white);
+    padding: 0px 10px 0px 20px;
+}
+
+/* operator */
+button{
+    height: 60px;
+    border-radius: 20px;
+    border: 1px solid var(--grey);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 2rem;
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+button:active{
+    background-color: rgba(186, 186, 186, 0.4);
+}
+
+.all-clear:hover{
+    background-color: rgba(241, 115, 119, 0.4);
+}
+
+/* equal sign */
+.equal-sign{
+    height: 100%;
+    grid-area: 2 / 4 / 6 / 5;
+}
+
+/* keys */
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+}
