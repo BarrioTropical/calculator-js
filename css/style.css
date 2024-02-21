@@ -34,6 +34,7 @@ body{
     height: 80px;
     background-color: transparent;
     color: var(--white);
+    text-align: right;
     padding: 0px 10px 0px 20px;
 }
 

@@ -77,7 +77,7 @@ const handleOperator = (nextOperator) => {
         calculator.operator = nextOperator;
         return
     }
-    if(firstOperand = null && !isNaN(inputValue)){
+    if(firstOperand === null && !isNaN(inputValue)){
         calculator.firstOperand = inputValue
     } else if (operator) {
         const result = calculate(firstOperand, inputValue, operator)
@@ -87,4 +87,26 @@ const handleOperator = (nextOperator) => {
 
     calculator.waitingForSecondOperand = true;
     calculator.operator = nextOperator;
+};
+
+//calculator math logic rules
+const calculate = (firstOperand, secondOperand, operator) => {
+    if(operator === '+'){
+        return firstOperand + secondOperand;
+    } else if(operator === '-'){
+        return firstOperand - secondOperand;
+    } else if(operator === '*'){
+        return firstOperand * secondOperand;
+    } else if(operator === ':'){
+        return firstOperand / secondOperand;
+    }
+    return secondOperand;
+};
+
+//clear all function
+const resetCalculator = () => {
+    calculator.displayValue = '0';
+    calculator.firstOperand = null;
+    calculator.waitingForSecondOperand = false;
+    calculator.operator = null;
 };
